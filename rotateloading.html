@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据加载</title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;}
+		.loading{background: #FFFFFF;width: 100%;height: 100%;left: 0; top: 0;position: fixed;z-index: 100;}
+		.loading .pic{
+			
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.loading .pic span{display: block;width: 80px;height: 80px;-webkit-box-shadow:0 5px 0 black;box-shadow:0 5px 0 black;position: absolute;top:10px;left: 10px;
+		      border-radius: 50%;
+		      -webkit-animation: rotate 1s infinite linear;
+		              animation: rotate 1s infinite linear;
+		}
+	@-webkit-keyframes rotate{
+		0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+	}
+	@keyframes rotate{
+		0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+	}
+	</style>
+	
+	<body>
+		<div class="loading">
+			<div class="pic">
+			<span></span>
+			<b></b>
+			</div>
+		</div>
+		<div>
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+	<img alt="jquery" src="">
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	var img=$("img");
+	img.each(function(i){
+		$(".pic b").html(parseInt(i/img.length*100)+"%");
+		img[i].onload = function(){
+			img[i].onload=null;
+		if(img.length==i+1){
+			$(".loading").fadeOut();
+		}
+		};
+		img[i].src ="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525607103754&di=a72ddac38c2f37f4eb94cc10f1c09a05&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fgamezone%2Fpics%2Fhv1%2F117%2F78%2F1829%2F118950732.jpg";
+	})
+		
+	</script>
+	</body>
+</html>
